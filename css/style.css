@@ -35,6 +35,17 @@
     height: 90px;
     background-color: blue;
 }
+.search {
+    width: 100%;
+    height: 60px;
+    background-color:crimson;
+}
+.left_main {
+    width: 100%;
+    height: calc(100% - 60px - 90px - 70px);
+    overflow: scroll;
+    background-color: darkgoldenrod;
+}
 .right {
     float: left;
     width: 60%;
@@ -45,5 +56,6 @@
     width: 100%;
     height: 80%;
     float: left;
+    overflow: scroll;
     background-color: coral;
 }
