@@ -48,7 +48,7 @@
                 </div>
                 <div class="left_main">
                     <ul>
-                        <li v-for="contact in contacts"><img src="img/avatar_1.jpg"alt=""></src> {{contact.name}}</li>
+                        <li v-for="contact in contacts"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
                     </ul>
                 </div>
             </div>
