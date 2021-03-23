@@ -6,70 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzap</title>
 </head>
 <body>
     <div class="general">
-        <div class="container">
+        <div id="root" class="container">
             <div class="left">
                 <div class="left_header">
-
+                    <div class="left_avatar_container">
+                        <img src="img/avatar_io.jpg" alt="">
+                    </div>
+                    <div class="left_account_container">
+                        <p>Jon Doe</p>
+                    </div>
+                    <div class="left_symbol_container">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
                 </div>
                 <div class="news">
-
+                    <div class="bell_container">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="news_txt_container">
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                    <a href="">Attiva notifiche desktop</a>
+                    </div>
                 </div>
                 <div class="search">
-
+                    <div class="search_container">
+                        <div class="lent_container">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="input_container">
+                            <input  class="input_check" placeholder=" Cerca o inizia una nuova chat" type="text">
+                        </div>
+                    </div>
                 </div>
                 <div class="left_main">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut debitis cupiditate maxime. Commodi, et libero? Minima enim minus consequuntur similique quod, rerum beatae veniam labore quo laudantium adipisci soluta doloribus.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nesciunt ea iste dolore blanditiis quia, nostrum repudiandae, magni voluptatem vero illo porro earum a ipsam ut excepturi qui maiores minus?
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis debitis repellat quae laboriosam similique aspernatur magni autem qui modi dolorem et nostrum officia porro, illum voluptates earum, quasi odio. Dolores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illo autem cum ea modi, voluptatum assumenda aut perferendis quisquam numquam aspernatur reprehenderit provident quibusdam, blanditiis ratione aperiam. Dolore, officia doloremque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ea eligendi doloribus ducimus dolore natus officiis similique minima? Expedita asperiores distinctio provident id reiciendis optio sunt quia magnam minima iste?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sequi reiciendis, voluptatum tempora doloribus qui! Tenetur doloremque odit iusto enim earum incidunt nobis ex. Autem exercitationem veniam accusantium odit deserunt?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, totam assumenda? Eveniet sequi fuga, assumenda vero tenetur laudantium quidem neque quas expedita magnam labore quia nemo dolorum voluptatibus adipisci nihil!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus velit reiciendis rerum omnis possimus harum distinctio nesciunt rem veritatis cupiditate? Atque sequi est voluptas. Reiciendis quo consequuntur atque molestiae aspernatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae eaque nesciunt explicabo impedit quidem mollitia minima illum repellendus totam, veniam laboriosam quia asperiores. Mollitia necessitatibus autem ab quisquam fugiat?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sunt provident sit aspernatur facere! Ratione eos corrupti autem temporibus fugiat nemo! Aspernatur cupiditate odit hic, iure delectus possimus mollitia totam.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur harum quasi eveniet rem delectus repellat ea nostrum repudiandae, nesciunt labore, qui doloribus error dolore, libero nobis? Animi totam incidunt labore!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti expedita ratione quod saepe aperiam nulla officiis dolor minima, culpa omnis asperiores pariatur iusto illo voluptates impedit, possimus et quia assumenda!
-                    </p>
+                    <ul>
+                        <li v-for="contact in contacts"><img src="img/avatar_1.jpg"alt=""></src> {{contact.name}}</li>
+                    </ul>
                 </div>
             </div>
             <div class="right">
                 <div class="right_header">
-
+                    <div class="right_subject">
+                        
+                        <p>Ultimo accesso oggi alle</p>
+                    </div>
+                    <div class="right_symbol_container">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
                 </div>
                 <div class="right_main">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut debitis cupiditate maxime. Commodi, et libero? Minima enim minus consequuntur similique quod, rerum beatae veniam labore quo laudantium adipisci soluta doloribus.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nesciunt ea iste dolore blanditiis quia, nostrum repudiandae, magni voluptatem vero illo porro earum a ipsam ut excepturi qui maiores minus?
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis debitis repellat quae laboriosam similique aspernatur magni autem qui modi dolorem et nostrum officia porro, illum voluptates earum, quasi odio. Dolores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illo autem cum ea modi, voluptatum assumenda aut perferendis quisquam numquam aspernatur reprehenderit provident quibusdam, blanditiis ratione aperiam. Dolore, officia doloremque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ea eligendi doloribus ducimus dolore natus officiis similique minima? Expedita asperiores distinctio provident id reiciendis optio sunt quia magnam minima iste?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sequi reiciendis, voluptatum tempora doloribus qui! Tenetur doloremque odit iusto enim earum incidunt nobis ex. Autem exercitationem veniam accusantium odit deserunt?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, totam assumenda? Eveniet sequi fuga, assumenda vero tenetur laudantium quidem neque quas expedita magnam labore quia nemo dolorum voluptatibus adipisci nihil!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus velit reiciendis rerum omnis possimus harum distinctio nesciunt rem veritatis cupiditate? Atque sequi est voluptas. Reiciendis quo consequuntur atque molestiae aspernatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae eaque nesciunt explicabo impedit quidem mollitia minima illum repellendus totam, veniam laboriosam quia asperiores. Mollitia necessitatibus autem ab quisquam fugiat?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sunt provident sit aspernatur facere! Ratione eos corrupti autem temporibus fugiat nemo! Aspernatur cupiditate odit hic, iure delectus possimus mollitia totam.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur harum quasi eveniet rem delectus repellat ea nostrum repudiandae, nesciunt labore, qui doloribus error dolore, libero nobis? Animi totam incidunt labore!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti expedita ratione quod saepe aperiam nulla officiis dolor minima, culpa omnis asperiores pariatur iusto illo voluptates impedit, possimus et quia assumenda!
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nesciunt ea iste dolore blanditiis quia, nostrum repudiandae, magni voluptatem vero illo porro earum a ipsam ut excepturi qui maiores minus?
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis debitis repellat quae laboriosam similique aspernatur magni autem qui modi dolorem et nostrum officia porro, illum voluptates earum, quasi odio. Dolores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illo autem cum ea modi, voluptatum assumenda aut perferendis quisquam numquam aspernatur reprehenderit provident quibusdam, blanditiis ratione aperiam. Dolore, officia doloremque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ea eligendi doloribus ducimus dolore natus officiis similique minima? Expedita asperiores distinctio provident id reiciendis optio sunt quia magnam minima iste?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sequi reiciendis, voluptatum tempora doloribus qui! Tenetur doloremque odit iusto enim earum incidunt nobis ex. Autem exercitationem veniam accusantium odit deserunt?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, totam assumenda? Eveniet sequi fuga, assumenda vero tenetur laudantium quidem neque quas expedita magnam labore quia nemo dolorum voluptatibus adipisci nihil!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus velit reiciendis rerum omnis possimus harum distinctio nesciunt rem veritatis cupiditate? Atque sequi est voluptas. Reiciendis quo consequuntur atque molestiae aspernatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae eaque nesciunt explicabo impedit quidem mollitia minima illum repellendus totam, veniam laboriosam quia asperiores. Mollitia necessitatibus autem ab quisquam fugiat?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sunt provident sit aspernatur facere! Ratione eos corrupti autem temporibus fugiat nemo! Aspernatur cupiditate odit hic, iure delectus possimus mollitia totam.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur harum quasi eveniet rem delectus repellat ea nostrum repudiandae, nesciunt labore, qui doloribus error dolore, libero nobis? Animi totam incidunt labore!
-                        Lorem ip
-                    </p>
+                    <p></p>
                 </div>
                 <div class="right_footer">
-
+                    <div class="right_footer_container">
+                        <div class="smile_container">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="input_footer">
+                            <input type="text" name="" placeholder=" Scrivi un messaggio" id="">
+                        </div>
+                        <div class="microphone_container">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
