@@ -91,5 +91,9 @@ var root = new Vue({
         ]
         
     },
-    
+    methods: {
+        setContactActive(index) {
+            this.contactActive = index;
+        }
+    }
     });

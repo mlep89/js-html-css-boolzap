@@ -48,7 +48,7 @@
                 </div>
                 <div class="left_main">
                     <ul>
-                        <li v-for="(contact, index) in contacts" @click="contactActive = index"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
+                        <li v-for="(contact, index) in contacts" @click="setContactActive(index)"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
                     </ul>
                 </div>
             </div>
@@ -56,9 +56,11 @@
                 <div class="right_header">
                     <div class="right_subject">
                         <img :src=" 'img/avatar' + contacts[contactActive].avatar + '.jpg'" alt="">
+                    </div>
+                    <div class="right_text">
                         <p>{{contacts[contactActive].name}}</p>
                         <p>Ultimo accesso oggi alle</p>
-                    </div>
+                        </div>
                     <div class="right_symbol_container">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-paperclip"></i>
@@ -66,7 +68,8 @@
                     </div>
                 </div>
                 <div class="right_main">
-                    <p></p>
+                    <p>{{contacts[contactActive].messages}}</p>
+                    
                 </div>
                 <div class="right_footer">
                     <div class="right_footer_container">

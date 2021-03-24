@@ -37,7 +37,8 @@
     align-self: center;
     width: 20%;
 }
-.left_avatar_container > img {
+.left_avatar_container > img,
+.right_subject > img {
     width: 60px;
     padding: 5px;
     border-radius: 50px;
@@ -129,8 +130,15 @@ li > img {
     background-color: #f3eeea;
 }
 .right_subject {
+    float:left;
     align-self: center;
-    width: 80%;
+    width: 10%;
+}
+.right_text {
+    float: left;
+    align-self: center;
+    width: 70%;
+    padding-left: 5px;
 }
 .right_symbol_container {
     align-self: center;
@@ -180,4 +188,24 @@ li > img {
     width: 100%;
     padding: 15px;
     border: none;
+}
+
+/* classi di prova */
+
+.right_main > p {
+    float: right;
+    padding: 20px;
+    background-color: lightgreen;
+    border-radius: 20px;
+    max-width: 60%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.destinatario {
+    text-align: right;
+    padding: 20px;
+    background-color: lightgrey;
+    border-radius: 20px;
 }
