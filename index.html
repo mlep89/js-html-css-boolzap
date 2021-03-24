@@ -68,8 +68,7 @@
                     </div>
                 </div>
                 <div class="right_main">
-                    <p>{{contacts[contactActive].messages}}</p>
-                    
+                    <p v-for="(message in contacts[contactActive].messages">{{message.text}}</p>
                 </div>
                 <div class="right_footer">
                     <div class="right_footer_container">
