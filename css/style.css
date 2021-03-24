@@ -6,15 +6,17 @@
 }
 /* Istruzioni generali*/
 .general {
+    display: flex;
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(green, 30%, gray);
+    background-image: linear-gradient(green 0px, green 15vh, lightgrey 15vh, lightgray 100%);
 }
 
 .container {
     width: 80%;
+    min-width: 900px;
     height: 90%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 /* Istruzioni parte sinistra*/

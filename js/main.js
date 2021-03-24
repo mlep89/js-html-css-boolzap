@@ -1,7 +1,9 @@
+Vue.config.devtools = true;
+
 var root = new Vue({
     el: '#root',
     data: {
-        counter: 0,
+        contactActive: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -89,4 +91,5 @@ var root = new Vue({
         ]
         
     },
+    
     });

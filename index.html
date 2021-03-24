@@ -48,14 +48,15 @@
                 </div>
                 <div class="left_main">
                     <ul>
-                        <li v-for="contact in contacts"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
+                        <li v-for="(contact, index) in contacts" @click="contactActive = index"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
                     </ul>
                 </div>
             </div>
             <div class="right">
                 <div class="right_header">
                     <div class="right_subject">
-                        
+                        <img :src=" 'img/avatar' + contacts[contactActive].avatar + '.jpg'" alt="">
+                        <p>{{contacts[contactActive].name}}</p>
                         <p>Ultimo accesso oggi alle</p>
                     </div>
                     <div class="right_symbol_container">
