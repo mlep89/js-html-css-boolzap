@@ -190,22 +190,32 @@ li > img {
     border: none;
 }
 
-/* classi di prova */
-
-.right_main > p {
-    float: right;
+/* classi della chat */
+.right_main > ul {
+    padding: 20px;
+}
+.right_main > ul > li {
+    list-style: none;
+}
+.sent {
     padding: 20px;
     background-color: lightgreen;
     border-radius: 20px;
-    max-width: 60%;
+    max-width: 50%;
     margin-bottom: 5px;
-    margin-top: 20px;
     margin-right: 20px;
 }
 
-.destinatario {
-    text-align: right;
+.received {
+    max-width: 50%;
     padding: 20px;
     background-color: lightgrey;
     border-radius: 20px;
+}
+.contact:hover {
+    background-color: lightgrey;
+}
+
+.contact:active {
+    background-color: grey;
 }

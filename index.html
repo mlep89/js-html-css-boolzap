@@ -48,7 +48,7 @@
                 </div>
                 <div class="left_main">
                     <ul>
-                        <li v-for="(contact, index) in contacts" @click="setContactActive(index)"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
+                        <li class="contact" v-for="(contact, index) in contacts" @click="setContactActive(index)"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +68,9 @@
                     </div>
                 </div>
                 <div class="right_main">
-                    <p v-for="(message in contacts[contactActive].messages">{{message.text}}</p>
+                    <ul>
+                        <li :class="message.status" v-for="(message in contacts[contactActive].messages">{{message.text}}</li>
+                    </ul>
                 </div>
                 <div class="right_footer">
                     <div class="right_footer_container">

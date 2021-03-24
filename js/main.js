@@ -94,6 +94,11 @@ var root = new Vue({
     methods: {
         setContactActive(index) {
             this.contactActive = index;
+        },
+        useClass(status) {
+            if (this.status = 'received') {
+                this.message = 'destinatario'; 
+            } 
         }
     }
     });
