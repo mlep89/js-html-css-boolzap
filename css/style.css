@@ -196,8 +196,12 @@ li > img {
 }
 .right_main > ul > li {
     list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .sent {
+    float: right;
+    clear:both;
     padding: 20px;
     background-color: lightgreen;
     border-radius: 20px;
@@ -207,10 +211,14 @@ li > img {
 }
 
 .received {
+    float: left;
+    clear: both;
     max-width: 50%;
     padding: 20px;
     background-color: lightgrey;
     border-radius: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
 }
 .contact:hover {
     background-color: lightgrey;
