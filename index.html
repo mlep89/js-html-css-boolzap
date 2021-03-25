@@ -42,13 +42,13 @@
                             <i class="fas fa-search"></i>
                         </div>
                         <div class="input_container">
-                            <input  class="input_check" placeholder=" Cerca o inizia una nuova chat" type="text">
+                            <input  class="input_check" placeholder=" Cerca o inizia una nuova chat" type="text" v-model="search">
                         </div>
                     </div>
                 </div>
                 <div class="left_main">
                     <ul>
-                        <li class="contact" v-for="(contact, index) in contacts" @click="setContactActive(index)"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
+                        <li class="contact" v-for="(contact, index) in filteredContacts" @click="setContactActive(index)"><img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg'"alt=""></src> {{contact.name}}</li>
                     </ul>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="input_footer">
-                            <input type="text" name="" placeholder=" Scrivi un messaggio" id="">
+                            <input type="text" @keypress.enter="addMessage" v-model="userInput" name="" placeholder=" Scrivi un messaggio">
                         </div>
                         <div class="microphone_container">
                             <i class="fas fa-microphone"></i>

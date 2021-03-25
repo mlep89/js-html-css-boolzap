@@ -3,6 +3,8 @@ Vue.config.devtools = true;
 var root = new Vue({
     el: '#root',
     data: {
+        search: '',
+        userInput: '',
         contactActive: 0,
         contacts: [
             {
@@ -99,6 +101,33 @@ var root = new Vue({
             if (this.status = 'received') {
                 this.message = 'destinatario'; 
             } 
+        },
+        addMessage: function(event) {
+           let thisContact = this.contacts[this.contactActive];
+           thisContact.messages.push(
+               {
+                date: '10/01/2020 15:50:00',
+                text: this.userInput,
+                status: 'sent'
+               });
+            this.userInput= '';
+            setTimeout(myFunction, 1000);
+
+            function myFunction(){
+                thisContact.messages.push(
+                    {
+                     date: '10/01/2020 15:50:00',
+                     text: 'ok',
+                     status: 'received'
+                    }); 
+            }
         }
+    },
+    computed: {
+        filteredContacts: function() {
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().match(this.search.toLowerCase());
+            });
+        } 
     }
     });
